@@ -1,50 +1,93 @@
-# React + TypeScript + Vite
+# Elías Leguizamón - Amalgama challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This project is a web application built with **Vite**, **React**, and **TypeScript**, following the principles of **Clean Architecture**. It is structured to ensure maintainability, scalability, and separation of concerns. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Key technologies used include:
 
-## Expanding the ESLint configuration
+- **Vite**: Fast build tool and development server.
+- **React**: JavaScript library for building user interfaces.
+- **TypeScript**: Superset of JavaScript that adds static typing.
+- **Chakra UI**: Component library for building accessible React applications.
+- **Formik/Yup**: Libraries for handling forms and validations.
+- **React Router**: Routing library for managing navigation within the app.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+## Features
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **Clean Architecture**: Organizes code to separate concerns and make it maintainable and scalable.
+- **Responsive Design**: Built with **Chakra UI** to ensure a consistent and accessible UI.
+- **Form Handling and Validation**: Powered by **Formik** for form state management and **Yup** for validation schemas.
+- **Client-side Routing**: Managed with **React Router** for navigating between pages.
+
+---
+
+## Project Structure
+
+The project follows the **Clean Architecture** pattern, dividing the code into distinct layers:
+
+```plaintext
+src/
+│
+├── components/        # Reusable UI components (Chakra UI-based)
+├── hooks/             # Custom React hooks
+├── pages/             # Application pages (views)
+├── routes/            # Route definitions (React Router)
+├── services/          # Business logic and API calls
+└── App.tsx            # Main application component
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Libraries and Tools
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Core Libraries
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+- **Vite**: Fast build tool and development server.
+- **React**: JavaScript library for building user interfaces.
+- **TypeScript**: Superset of JavaScript that adds static typing.
+
+### UI and Styling
+
+- **Chakra UI**: Component library for building accessible React applications.
+
+### Form Management
+
+- **Formik**: Library for building forms with React.
+- **Yup**: Library for schema-based form validation.
+
+### Routing
+
+- **React Router**: Routing library for managing navigation within the app.
+
+## Setup
+
+1. Clone the repository and navigate to the project folder.
+
+```bash
+git clone https://github.com/EliasLeguizamon123/amalgama_super_login.git
 ```
+
+2. Navigate to the project folder.
+
+```bash
+cd amalgama_super_login
+```
+
+3. Install the dependencies.
+
+```bash
+npm install
+# or 
+yarn install
+```
+
+4. Start the development server.
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+This will run the app on `http://localhost:5173/`
