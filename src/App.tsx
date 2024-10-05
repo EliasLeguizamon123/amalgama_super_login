@@ -6,7 +6,6 @@ function App() {
 
     return (
         <Flex direction={'column'} h={'100%'} overflow={'hidden'}>
-
             <Router />
         </Flex>
     )

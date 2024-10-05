@@ -49,7 +49,6 @@ const CustomInput = (props: CustomInputProps) => {
                                     })}
                                     _focusWithin={{
                                         border: '0.15em solid',
-                                        borderColor: 'primary',
                                         boxShadow: 'none',
                                     }}
                                     autoFocus={props.autofocus}
@@ -96,7 +95,6 @@ const CustomInput = (props: CustomInputProps) => {
                                     <InputRightElement>
                                         <Button
                                             _focus={{}}
-                                            color="primary"
                                             h="95%"
                                             size="sm"
                                             variant="ghost"

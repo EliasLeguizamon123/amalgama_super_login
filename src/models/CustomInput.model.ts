@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { InputElementProps } from '@chakra-ui/react';
 
 export interface CustomInputProps {
