@@ -33,7 +33,7 @@ const CustomInput = (props: CustomInputProps) => {
                                 <FormLabel htmlFor={props.name}>
                                     {props.label}{' '}
                                     {props.isRequired ? (
-                                        <Box as="span" color="red.500">
+                                        <Box as="span" color="error">
                                             *
                                         </Box>
                                     ) : null}
@@ -42,18 +42,20 @@ const CustomInput = (props: CustomInputProps) => {
                             <InputGroup variant={'outline'}>
                                 
                                 <Input
+                                    bg="input"
                                     {...props.inputProps}
                                     {...field}
                                     {...(props.onKeyDown && {
                                         onKeyDown: props.onKeyDown,
                                     })}
+                                    _placeholder={{
+                                        color: '#363a4f'
+                                    }}
                                     _focusWithin={{
                                         border: '0.15em solid',
                                         boxShadow: 'none',
                                     }}
                                     autoFocus={props.autofocus}
-                                    bg="white"
-                                    color={'black'}
                                     css={{
                                         '&::-webkit-inner-spin-button, &::-webkit-outer-spin-button':
                                             {
@@ -94,6 +96,7 @@ const CustomInput = (props: CustomInputProps) => {
                                 {props.type && props.type === 'password' ? (
                                     <InputRightElement>
                                         <Button
+                                            color="primary"
                                             _focus={{}}
                                             h="95%"
                                             size="sm"
@@ -116,7 +119,7 @@ const CustomInput = (props: CustomInputProps) => {
             <ErrorMessage
                 name={props.name}
                 render={(msg) => (
-                    <Text color="red" fontSize={'0.8em'} margin={'0.5em'}>
+                    <Text color="error" fontSize={'0.8em'} margin={'0.5em'}>
                         {msg}
                     </Text>
                 )}

@@ -31,7 +31,7 @@ export default function Login() {
             w="full"
         >
             <Card>
-                <FaUserCircle size="5rem" />
+                <FaUserCircle size="5rem" color="#91d7e3" />
                 <Formik initialValues={initialData} 
                     validationSchema={validationSchema} 
                     enableReinitialize 
@@ -57,7 +57,7 @@ export default function Login() {
                             />
                             <Button 
                                 type="submit" 
-                                colorScheme="blue" 
+                                bg="primary"
                                 size="lg" 
                                 isLoading={loading} 
                                 rightIcon={<MdEmail />}
