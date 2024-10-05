@@ -42,6 +42,7 @@ const CustomInput = (props: CustomInputProps) => {
                             <InputGroup variant={'outline'}>
                                 
                                 <Input
+                                    color="base"
                                     bg="input"
                                     {...props.inputProps}
                                     {...field}
@@ -49,7 +50,8 @@ const CustomInput = (props: CustomInputProps) => {
                                         onKeyDown: props.onKeyDown,
                                     })}
                                     _placeholder={{
-                                        color: '#363a4f'
+                                        color: '#363a4f',
+                                        fontWeight: 'bold',
                                     }}
                                     _focusWithin={{
                                         border: '0.15em solid',
@@ -96,7 +98,7 @@ const CustomInput = (props: CustomInputProps) => {
                                 {props.type && props.type === 'password' ? (
                                     <InputRightElement>
                                         <Button
-                                            color="primary"
+                                            color="base"
                                             _focus={{}}
                                             h="95%"
                                             size="sm"

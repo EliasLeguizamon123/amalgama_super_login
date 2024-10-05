@@ -58,6 +58,7 @@ export default function Login() {
                             <Button 
                                 type="submit" 
                                 bg="primary"
+                                mt={2}
                                 size="lg" 
                                 isLoading={loading} 
                                 rightIcon={<MdEmail />}

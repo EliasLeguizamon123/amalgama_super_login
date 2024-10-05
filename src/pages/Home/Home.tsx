@@ -1,5 +1,7 @@
-import { VStack } from "@chakra-ui/react";
+import { Image, Text, VStack } from "@chakra-ui/react";
 import Fireworks from "react-canvas-confetti/dist/presets/fireworks";
+import Navbar from "../../components/Navbar.component";
+import Logo from '../../assets/logo.png'
 
 export default function Home() {
     return (
@@ -11,8 +13,10 @@ export default function Home() {
             spacing="1rem"
             w="full"
         >
+            <Navbar />
             <Fireworks autorun={{ speed: 1, duration: 4000 }} />
-            <h1>Welcome to the Home Page</h1>
+            <Text pt={12} fontSize={'5xl'}>Welcome to the Home Page</Text>
+            <Image src={Logo} />
         </VStack>
     )
 }
